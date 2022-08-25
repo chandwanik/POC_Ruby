@@ -4,11 +4,13 @@ pipeline {
     stage("build") {
           steps {
             echo 'building the application....'
+            bat 'cucumber'
           }
        }
     stage("test") {
           steps {
             echo 'running tests.....'
+            
           }
        }
     stage("deploy") {
