@@ -1,0 +1,4 @@
+---
+default: --profile html_report --profile sanity --publish  
+html_report: --format progress --format html --out reports/TestReport_<%= Time.now.strftime("%d-%m-%y_%H%M%S")%>.html
+sanity: --tag @kaushal
