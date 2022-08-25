@@ -4,12 +4,13 @@ pipeline {
     stage("build") {
           steps {
             echo 'building the application....'
-            bat 'cucumber'
+            sh 'gem install bundler'
           }
        }
     stage("test") {
           steps {
             echo 'running tests.....'
+            sh 'cucumber'
             
           }
        }
